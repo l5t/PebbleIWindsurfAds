@@ -1,18 +1,18 @@
 {
-    "resources": {
-        "media": []
-    },
     "longName": "iWindsurfAds",
-    "appKeys": {},
-    "watchapp": {
-        "watchface": false
-    },
-    "versionLabel": "1.0",
+    "versionCode": 1,
     "shortName": "iWindsurfAds",
-    "companyName": "laurent@wit.ai",
     "capabilities": [
         "configurable"
     ],
-    "versionCode": 1,
-    "uuid": "7b91e6b4-9572-4aff-b41d-25e54d58df26"
+    "resources": {
+        "media": []
+    },
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    },
+    "uuid": "7b91e6b4-9572-4aff-b41d-25e54d58df26",
+    "appKeys": {},
+    "companyName": "laurent@wit.ai"
 }

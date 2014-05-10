@@ -7,6 +7,7 @@ simply.style('small'); //use smallest text
 var apptitle = "iWindsurf Add";
 var api_key = "e0410419639a90c0e2ac742009fffaf6";//kimono
 var api_route = "83cb43fe";
+var islocation =  /(CA\n|SF\n|Bay Area|California)/i;
  
 var notrequesting = true;
 var feedtimer,status = null;//timers for both status while requesting the feed and for updating the feed
@@ -73,9 +74,11 @@ function requestfeed() {
     var arr = news.results.iwindsurf;
     var ad ='';
     console.log("arr.length:" + arr.length);
-    for(var i=1;i<10 && i<arr.length;i++){
-      console.log("ad:"+ arr[i]["ads"]["text"].replace(/\n/g, " "));
-      ad += arr[i]["ads"]["text"].replace(/^(\d\n)/,"$1-").replace(/\n/g, " ") + '\n';      
+    for(var i=1;i<15 && i<arr.length;i++){
+      if(islocation.test(arr[i]["ads"]["text"])){
+        console.log("ad:"+ arr[i]["ads"]["text"].replace(/\n/g, " "));
+        ad += arr[i]["ads"]["text"].replace(/^(\d\n)/,"$1-").replace(/\n/g, " ") + '\n';
+      }
     }
     setstatus("");
     notrequesting = true;
